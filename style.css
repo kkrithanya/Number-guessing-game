@@ -1,0 +1,21 @@
+:root { --ink:#12243b; --muted:#d7e5f4; --paper:#0b4f91; --teal:#07508d; --lime:#d6f477; --line:#cbdced; --shadow:0 20px 55px rgba(2,25,55,.25); }
+    * { box-sizing:border-box; }
+    body { position:relative; min-height:100vh; margin:0; overflow-x:hidden; color:white; background:#0b4f91; font-family:'Trebuchet MS',sans-serif; }
+    body::before { position:fixed; z-index:0; inset:0; display:grid; place-items:center; color:rgba(255,255,255,.08); content:'01 02 03\A 04 05 06\A 07 08 09'; font-family:Georgia,serif; font-size:clamp(80px,15vw,190px); font-weight:700; letter-spacing:.08em; line-height:1.15; pointer-events:none; text-align:center; white-space:pre; }
+    button,input { font:inherit; } button { cursor:pointer; }
+    .page-shell { position:relative; z-index:1; width:min(1120px,calc(100% - 40px)); margin:0 auto; padding:72px 0 30px; }
+    .page-header { max-width:700px; margin-bottom:55px; }
+    h1,h2 { margin:0; font-family:Georgia,serif; letter-spacing:-.045em; } h1 { font-size:clamp(45px,7vw,76px); line-height:.98; } h1 span { color:var(--lime); }
+    .project-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+    .project-card { min-height:520px; padding:30px; border:1px solid rgba(255,255,255,.55); box-shadow:var(--shadow); }
+    .counter-card { background:linear-gradient(145deg,#07508d,#062d66); } .guess-card { color:var(--ink); background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(224,239,255,.96)); }
+    .card-topline { display:flex; align-items:center; justify-content:space-between; } .project-number { color:var(--lime); font-size:11px; font-weight:700; letter-spacing:.12em; } .guess-card .project-number { color:#bb6c3d; }
+    h2 { margin-top:56px; font-size:40px; } .card-description { min-height:52px; margin:12px 0 0; color:rgba(255,255,255,.7); line-height:1.5; } .guess-card .card-description { color:#52657a; }
+    .counter-value { margin:43px 0; font-family:Georgia,serif; font-size:115px; line-height:.8; text-align:center; }
+    .button-row,.guess-row { display:flex; gap:8px; } .button { min-height:45px; padding:0 15px; border:1px solid transparent; font-size:13px; font-weight:700; transition:transform .2s,background .2s,border-color .2s; } .button:hover { transform:translateY(-2px); }
+    .button-primary { color:var(--ink); background:var(--lime); } .button-primary:hover { background:#c5e85c; } .button-secondary { color:white; border-color:rgba(255,255,255,.4); background:transparent; } .button-secondary:hover { background:rgba(255,255,255,.12); } .button-light { color:var(--ink); border-color:var(--line); background:var(--paper); }
+    .guess-form { margin-top:39px; } .guess-form label { display:block; margin-bottom:9px; color:#52657a; font-size:12px; font-weight:700; text-transform:uppercase; } .guess-row input { min-width:0; flex:1; padding:0 14px; border:1px solid var(--line); outline:0; color:var(--ink); background:#f4f6f0; } .guess-row input:focus { border-color:var(--teal); }
+    .guess-message { min-height:52px; margin:25px 0 16px; padding:15px; color:var(--teal); background:#edf6d2; line-height:1.4; } .game-info { display:flex; align-items:center; justify-content:space-between; padding:17px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); color:#52657a; font-size:13px; } .game-info strong { color:var(--ink); font-family:Georgia,serif; font-size:25px; }
+    .play-again { width:100%; margin-top:20px; } .page-footer { padding-top:28px; color:var(--muted); font-size:12px; text-align:center; }
+    @media (max-width:760px) { .page-shell { padding-top:45px; } .project-grid { grid-template-columns:1fr; } .project-card { min-height:auto; } h2 { margin-top:40px; } }
+    @media (max-width:420px) { .page-shell { width:min(100% - 28px,1120px); } .project-card { padding:22px; } .button-row { flex-wrap:wrap; } .button-row .button { flex:1; } .guess-row { flex-direction:column; } .guess-row input { min-height:45px; } }

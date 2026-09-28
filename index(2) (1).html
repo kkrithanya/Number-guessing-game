@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Number Guessing Game</title>
+  
+</head>
+<body>
+  <main class="page-shell">
+    <header class="page-header"><h1>Number Guessing<br><span>Game</span></h1></header>
+    <section class="project-grid">
+      <article class="project-card counter-card">
+        <div class="card-topline"><span class="project-number">01</span><span>State &amp; events</span></div>
+        <h2>Counter App</h2><p class="card-description">Change the number with three simple controls.</p>
+        <div id="counter-value" class="counter-value">0</div>
+        <div class="button-row"><button id="decrease-button" class="button button-secondary" type="button">Decrease</button><button id="reset-button" class="button button-light" type="button">Reset</button><button id="increase-button" class="button button-primary" type="button">Increase</button></div>
+      </article>
+      <article class="project-card guess-card">
+        <div class="card-topline"><span class="project-number">02</span></div>
+        <p class="card-description">Can you find the secret number between 1 and 100?</p>
+        <form id="guess-form" class="guess-form"><label for="guess-input">Your guess</label><div class="guess-row"><input id="guess-input" type="number" min="1" max="100" placeholder="1–100" required><button class="button button-primary" type="submit">Guess</button></div></form>
+        <p id="guess-message" class="guess-message" aria-live="polite">Make your first guess.</p><div class="game-info"><span>Attempts</span><strong id="attempt-count">0</strong></div><button id="play-again-button" class="button button-light play-again" type="button" hidden>Play Again</button>
+      </article>
+    </section>
+    <footer class="page-footer">Build it. Break it. Understand it.</footer>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>
